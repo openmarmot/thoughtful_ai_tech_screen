@@ -16,7 +16,7 @@ def sort(width, height, length, mass):
             sort='SPECIAL'
 
         # check dimensions 
-        if (width*height*length>=1000000) or (width + height + length >150):
+        if (width*height*length>=1000000) or any(num >= 150 for num in (width,height,length)):
 
             # heavy and bulky get rejected
             if sort=='SPECIAL':
